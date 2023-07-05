@@ -13,29 +13,29 @@
     padding: 0 32px;
 }
 
-#navbar {
+body > header:first-child {
     padding: 20px 0;
     border-bottom: 1px solid #EAEBF0;
 }
 
-#navbar nav {
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#navbar nav .left {
+.navbar .left-side {
     display: flex;
     column-gap: 64px;
     align-items: center;
 }
 
-#navbar nav .left .content-nav {
+.navbar .left-side .nav-items {
     display: flex;
     column-gap: 32px;
 }
 
-#navbar nav .left .content-nav a {
+.navbar .left-side .nav-items a {
     color: #272D37;
     font-size: 15px;
     font-style: normal;
@@ -44,17 +44,17 @@
     transition: 0.2s;
 }
 
-#navbar nav .left .content-nav a:hover {
+.navbar .left-side .nav-items a:hover {
     color: #4b586e;
 }
 
-#navbar nav .right {
+.navbar .right-side {
     display: flex;
     column-gap: 24px;
     align-items: center;
 }
 
-#navbar nav .right .sign-up {
+.navbar .right-side button:first-child {
     color: #437EF7;
     font-size: 15px;
     font-style: normal;
@@ -65,11 +65,11 @@
     transition: 0.3s;
 }
 
-#navbar nav .right .sign-up:hover {
+.navbar .right-side button:first-child:hover {
     transform: scale(1.1);
 }
 
-#navbar nav .right .log-in {
+.navbar .right-side button:last-child {
     color: #FFF;
     font-size: 15px;
     font-style: normal;
@@ -84,30 +84,27 @@
     cursor: pointer;
 }
 
-#navbar nav .right .log-in:hover {
+.navbar .right-side button:last-child:hover {
     border-color: #437EF7;
     background-color: transparent;
     color: #437EF7;
 }
 
-#navbar nav .burger-btn {
+.navbar .burger-btn {
     background-color: transparent;
     display: none;
+
 }
 
-#hype-section {
+.landing-section .landing-container {
     padding-top: 80px;
     padding-bottom: 92px;
-}
-
-#hype-section > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
 
-#hype-section > div p:first-of-type {
+.landing-section .landing-container p:first-of-type {
     color: #437EF7;
     text-align: center;
     font-size: 14px;
@@ -117,29 +114,28 @@
     letter-spacing: -0.1px;
 }
 
-#hype-section > div p:last-of-type {
+.landing-section .landing-container p:last-of-type {
     color: #5F6D7E;
-
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
     letter-spacing: -0.1px;
-    width: 640px;
+    text-align: center;
 }
 
-#hype-section > div .first {
-    color: var(--gray-700, #272D37); 
+.landing-section .landing-container .first {
+    color:#272D37; 
     font-size: 52px;
     font-style: normal;
     font-weight: 700;
     line-height: 60px;
     letter-spacing: -0.52px;
     margin: 16px 0 24px;
-    width: 540px;
+    text-align: center;
 }
 
-#hype-section > div .second {
+.landing-section .landing-container .second {
     color: #272D37;
     font-size: 52px;
     font-style: normal;
@@ -148,29 +144,36 @@
     letter-spacing: -0.52px;
     display: none;
     width: 672px;
-    margin-bottom: 24px;
+    text-align: center;
 }
 
-#messaging-section {
-    padding: 64px 0;
+.landing-section .landing-container .third {
+    color: #272D37;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+    text-align: center;
+    display: none;
 }
 
-#messaging-section > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.messaging-section .messaging-container {
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
-#messaging-section > div h3 {
+.messaging-section .messaging-container .top h3 {
     color: #272D37;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: -0.64px;
+    text-align: center;
 }
 
-#messaging-section > div > p {
+.messaging-section .messaging-container .top p {
     color: #5F6D7E;
     font-size: 16px;
     font-style: normal;
@@ -178,18 +181,19 @@
     line-height: 24px;
     letter-spacing: -0.1px;
     margin: 16px 0 64px;
+    text-align: center;
 }
 
-#messaging-section > div .raw {
+.messaging-section .messaging-container .bottom {
     display: flex;
     column-gap: 32px;
 }
 
-#messaging-section > div .raw .group-none {
+.messaging-section .messaging-container .bottom .group-none {
     display: none;
 }
 
-#messaging-section > div .raw .group .icon{
+.messaging-section .messaging-container .bottom .group .icon {
     background-color: #437EF7;
     border-radius: 30px;
     width: 48px;
@@ -199,7 +203,7 @@
     justify-content: center;
 }
 
-#messaging-section > div .raw .group h5 {
+.messaging-section .messaging-container .bottom .group h5 {
     color: #272D37;
     font-size: 22px;
     font-style: normal;
@@ -209,7 +213,7 @@
     margin: 20px 0 12px;
 }
 
-#messaging-section > div .raw .group p {
+.messaging-section .messaging-container .bottom .group p {
     color: #5F6D7E;
     font-size: 16px;
     font-style: normal;
@@ -219,11 +223,11 @@
     width: 384px;
 }
 
-#messaging-section > div .raw .group .learn-more-btn {
+.messaging-section .messaging-container .bottom .group .learn-more-btn {
     display: none;
 }
 
-#messaging-section > div .raw .group .learn-more-btn button {
+.messaging-section .messaging-container .bottom .group .learn-more-btn button {
     color: #437EF7;
     font-size: 15px;
     font-style: normal;
@@ -236,16 +240,15 @@
     margin-top: 16px;
 }
 
-#demonstrate-section {
-    margin: 64px 0;
-}
-
-#demonstrate-section > div {
+.demonstrate-section .demonstrate-container {
+    padding-top: 64px;
+    padding-bottom: 64px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-#demonstrate-section > div .left h4 {
+.demonstrate-section .demonstrate-container .left h4 {
     width: 532px;
     color: #272D37;
     font-size: 32px;
@@ -256,7 +259,7 @@
     margin-bottom: 16px;
 }
 
-#demonstrate-section > div .left p {
+.demonstrate-section .demonstrate-container .left p {
     width: 532px;
     color: #5F6D7E;
     font-size: 16px;
@@ -267,7 +270,7 @@
     margin-bottom: 24px;
 }
 
-#demonstrate-section > div .left ul li {
+.demonstrate-section .demonstrate-container .left ul li {
     display: flex;
     align-items: center;
     column-gap: 8px;
@@ -280,7 +283,7 @@
     letter-spacing: -0.1px;
 }
 
-#demonstrate-section > div .left .start-now-btn {
+.demonstrate-section .demonstrate-container .left .start-now-btn {
     color: #FFF;
     font-size: 15px;
     font-style: normal;
@@ -299,20 +302,24 @@
     margin-top: 40px;
 }
 
-#demonstrate-section > div .left .start-now-btn:hover {
+.demonstrate-section .demonstrate-container .left .start-now-btn:hover {
     background-color: #32538b;
 }
 
-#demonstrate-section > div .right img:last-child {
+.demonstrate-section .demonstrate-container .right img:nth-child(2){
     display: none;
 }
 
-#core-section {
-    margin-top: 64px;
-    margin-bottom: 64px;
+.demonstrate-section .demonstrate-container .right img:last-child {
+    display: none;
 }
 
-#core-section > div > h4 {
+.core-section .core-container{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.core-section .core-container .top h4 {
     color: #272D37;
     font-size: 32px;
     font-style: normal;
@@ -320,20 +327,21 @@
     line-height: 40px;
     letter-spacing: -0.64px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
-#core-section > div p {
+.core-section .core-container .top p {
     color: #5F6D7E;
-    width: 800px;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.1px;
     margin-bottom: 64px;
+    text-align: center;
 }
 
-#core-section > div .raw .group h6 {
+.core-section .core-container .bottom .group h6 {
     color: #272D37;
     font-size: 22px;
     font-style: normal;
@@ -343,11 +351,7 @@
     margin-top: 16px;
 }
 
-#core-section > div .raw .group {
-    width: 384px;
-}
-
-#core-section > div .raw .group p {
+.core-section .core-container .bottom .group p {
     color: #5F6D7E;
     font-size: 16px;
     font-style: normal;
@@ -357,116 +361,529 @@
     margin-bottom: 16px;
 }
 
-#core-section > div .raw {
-    display: flex;
-    column-gap: 32px;
-}
-
-#core-section > div .raw .group .icons {
+.core-section .core-container .bottom .group .icons {
     display: flex;
     column-gap: 16px;
 }
 
-#core-section > div {
+.core-section .core-container .bottom {
     display: flex;
-    flex-direction: column;
+    column-gap: 32px;
 }
 
-@media screen and (max-width: 1200px) {
-    #navbar nav {
-        width: 100%;
+.frequently-section .frequently-container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.frequently-section .frequently-container .top h4 {
+    color: #272D37;
+    text-align: center;
+    font-size: 32px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.64px;
+}
+
+.frequently-section .frequently-container .top p {
+    color: #5F6D7E;
+    text-align: center;
+    font-size: 16px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    margin-top: 16px;
+    margin-bottom: 64px;
+}
+
+.frequently-section .frequently-container .bottom {
+    border-radius: 5px;
+}
+
+.frequently-section .frequently-container .bottom div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.frequently-section .frequently-container .bottom div .issues {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 32px;
+}
+
+.frequently-section .frequently-container .bottom div .issues h4 {
+    color:#272D37;
+    font-size: 18px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: -0.1px;
+}
+
+.frequently-section .frequently-container .bottom div .issues h6 {
+    color:#5F6D7E;
+font-size: 16px;
+font-family: Inter;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.1px;
+}
+
+.frequently-section .frequently-container .bottom .new-button {
+    padding: 16px 32px;
+}
+
+.frequently-section .frequently-container .bottom div button {
+    color: #437EF7;
+font-size: 14px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: -0.1px;
+padding: 4px 12px;
+border-radius: 5px;
+background: transparent;
+cursor: pointer;
+}
+
+.frequently-section .frequently-container .bottom div button:hover {
+    transform: scale(1.1);
+}
+
+.frequently-section .frequently-container .bottom div h5 {
+    color: #272D37;
+font-size: 16px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.1px;
+padding: 16px 32px;
+}
+
+.frequently-section .frequently-container .bottom div .update p {
+    color: #5F6D7E;
+font-size: 16px;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.1px;
+padding: 16px;
+}
+
+.frequently-section .frequently-container .bottom div .update {
+    display: flex;
+}
+
+.frequently-section .frequently-container .bottom div .update img {
+    padding: 16px 32px 16px 16px;
+}
+
+.welcome-section {
+    background-color: #2B63D9;
+}
+
+.welcome-section .welcome-container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-section .welcome-container p {
+    color: #FFF;
+    font-size: 14px;
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: -0.1px;
+}
+
+.welcome-section .welcome-container h4 {
+    color: #FFF;
+    font-size: 32px;
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+line-height: 42px;
+letter-spacing: -0.32px;
+width: 600px;
+margin-top: 8px;
+margin-bottom: 32px;
+text-align: center;
+}
+
+.welcome-section .welcome-container .buttons {
+    display: flex;
+    column-gap: 16px;
+}
+
+.welcome-section .welcome-container .buttons button:first-child {
+    color:#437EF7;
+text-align: center;
+/* Text Button/Semibold Large */
+font-size: 15px;
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+line-height: 22px;
+border-radius: 6px;
+background:#FFF;
+padding: 12px 18px;
+cursor: pointer;
+}
+
+.welcome-section .welcome-container .buttons button:first-child:hover {
+    transform: scale(1.1);
+}
+
+.welcome-section .welcome-container .buttons button:last-child:hover {
+    transform: scale(1.1);
+}
+
+.welcome-section .welcome-container .buttons button:last-child {
+    color:#FFF;
+text-align: center;
+/* Text Button/Semibold Large */
+font-size: 15px;
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+line-height: 22px;
+padding: 12px 18px;
+background-color: #437EF7;
+border-radius: 6px;
+box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+cursor: pointer;
+}
+
+.logo-section {
+    background-color: #2B63D9;
+}
+
+.logo-section .logo-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    column-gap: 64px;
+    justify-content: center;
+}
+
+
+.logo-section .logo-container .top {
+    display: flex;
+    column-gap: 64px;
+}
+
+.logo-section .logo-container .bottom {
+    display: flex;
+    column-gap: 64px;
+}
+
+@media screen and (max-width: 1280px) {
+    .navbar {
+        width:100%;
         padding: 0 16px;
     }
 
-    #navbar nav .left .content-nav {
+    .navbar .left-side .nav-items {
         display: none;
-    } 
+    }
 
-    #navbar nav .burger-btn {
+    .navbar .right-side {
+        display: none;
+    }
+
+    .navbar .burger-btn {
         display: initial;
     }
 
-    #navbar nav .right {
-        display: none;
-    }
-
-    #navbar {
-        padding: 16px 0; 
-    }
-
-    #hype-section > div .first {
-        display: none;
-    }
-
-    #hype-section > div .second {
-        display: initial;
-    }
-
-    #hype-section > div p:last-of-type {
-        width: 672px;
+    body > header:first-child {
+        padding: 16px 0;
     }
 
     .container {
-        width: 704px;
+        width: 768px;
     }
 
-    #messaging-section {
-        padding: 40px 0;
-    }
-
-    #messaging-section > div h3 {
-        margin-bottom: 32px;
-    }
-
-    #messaging-section > div > p {
+    .landing-section .landing-container .first {
         display: none;
     }
 
-    #messaging-section > div .raw {
-        flex-wrap: wrap;
-        row-gap: 48px;
-        width: 704px;
+    .landing-section .landing-container .second {
+        display: initial;
+    }
+
+    .messaging-section .messaging-container .bottom .group .learn-more-btn {
+        display: initial;
+    }
+
+    .messaging-section .messaging-container .bottom .group-none {
+        display: initial;
     }
     
-    #messaging-section > div .raw .group-none {
-        display: initial;
-    }    
+    .messaging-section .messaging-container .bottom {
+        flex-wrap: wrap;
+        row-gap: 48px;
+    }
 
-    #messaging-section > div .raw .group p {
+    .messaging-section .messaging-container .bottom .group p {
         width: 336px;
     }
 
-    #messaging-section > div .raw .group .learn-more-btn {
-        display: initial;
+    .messaging-section .messaging-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
-    #demonstrate-section {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    #demonstrate-section > div {
-        flex-direction: column;
-    }
-
-    #demonstrate-section > div .right img:first-child {
+    .messaging-section .messaging-container .top p {
         display: none;
     }
 
-    #demonstrate-section > div .right img:last-child {
-        display: initial;
-        margin-top: 48px;
+    .messaging-section .messaging-container .top  h3 {
+        margin-bottom: 32px;
     }
 
-    #demonstrate-section > div .left h4 {
-        width: 704px;
-        margin-bottom: 24px;
+    .demonstrate-section .demonstrate-container {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 48px;
     }
+
+    .demonstrate-section .demonstrate-container .left p {
+        display: none;
+    }
+
+    .demonstrate-section .demonstrate-container .left h4 {
+        width: 704px;
+    }
+
+    .demonstrate-section .demonstrate-container .right img:first-child {
+        display: none;
+    }
+
+    .demonstrate-section .demonstrate-container .right img:nth-child(2) {
+        display: initial;
+    }
+
+    .core-section .core-container{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .core-section .core-container .bottom {
+        flex-wrap: wrap;
+        gap: 32px   ;
+    }
+
+    .core-section .core-container .bottom .group > img {
+        width: 336px;
+        height: 286px;
+    }
+
+    .core-section .core-container .top p {
+        margin-bottom: 40px;
+    }
+
+    .landing-section .landing-container p:last-of-type {
+        margin-top: 24px;
+    }
+
+    .frequently-section .frequently-container {
+        padding-top: 40px;
+        padding-bottom: 40;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .frequently-section .frequently-container .bottom div .update {
+        display: none;
+    }
+
+    .frequently-section .frequently-container .top p {
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+
+    .logo-section .logo-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .logo-section .logo-container .top {
+        column-gap: 32px;
+        justify-content: center;
+    }
+
+    .logo-section .logo-container .bottom {
+        column-gap: 32px;
+        justify-content: center;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
-    #navbar nav {
-        width: 100%;
-        padding: 0 16px;
+    .container {
+        width: 100%
+    }
+
+    .landing-section .landing-container {
+        padding: 32px 16px 40px 16px;
+    }
+
+
+    .landing-section .landing-container .second {
+        display: none;
+    }
+
+    .landing-section .landing-container .third {
+        display: initial;
+        margin-top: 32px;
+    }
+
+    .landing-section .landing-container p:last-of-type {
+        width: 343px;
+        margin-top: 16px;
+    }
+
+    .messaging-section .messaging-container {
+        padding: 32px 16px 32px 16px;
+    }
+
+    .messaging-section .messaging-container .top h3 {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.48px;
+        margin-bottom: 32px;
+    }
+
+    .messaging-section .messaging-container .top p {
+        display: none;
+    }
+
+    .messaging-section .messaging-container .bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .messaging-section .messaging-container .bottom .group h5 {
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    .demonstrate-section .demonstrate-container {
+        padding: 32px 16px;
+        gap: 32px;
+    }
+
+    .demonstrate-section .demonstrate-container .left h4 {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.56px;
+        width: 343px;
+    }
+
+    .demonstrate-section .demonstrate-container .right img:nth-child(2){
+        display: none;
+    }
+
+    .demonstrate-section .demonstrate-container .right img:last-child {
+        display: initial;
+    }
+
+    .demonstrate-section .demonstrate-container .left .start-now-btn {
+        margin-top: 32px;
+    }
+  
+    .core-section .core-container{
+        padding: 40px 32px;
+    }
+
+    .core-section .core-container .top h4 {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.48px;
+    }
+
+    .core-section .core-container .top p {
+        width: 311px;
+        margin-top: 12px;
+        margin-bottom: 32px;
+    }
+
+    .core-section .core-container .bottom {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .frequently-section .frequently-container {
+        padding: 40px 16px;
+    }
+
+    .frequently-section .frequently-container .top h4 {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.48px;
+    }
+
+    .frequently-section .frequently-container .top p {
+        margin-top: 12px;
+        margin-bottom: 32px;
+    }
+
+    .welcome-section .welcome-container h4 {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.56px;
+        width: 343px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .welcome-section .welcome-container .buttons {
+       flex-direction: column;
+       gap: 16px;
+    }
+
+    .welcome-section .welcome-container .buttons button:first-child {
+        width: 343px;
+        height: 46px;
+    }
+
+    .logo-section .logo-container {
+        padding: 32px 16px;
+    }
+
+    .logo-section .logo-container {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .logo-section .logo-container .top {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .logo-section .logo-container .bottom {
+        flex-direction: column;
+        gap: 32px;
     }
 }
